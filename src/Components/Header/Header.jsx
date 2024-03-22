@@ -3,7 +3,7 @@ import classes from "./Header.module.css";
 import { FaSearch } from "react-icons/fa";
 import { BiCartAdd } from "react-icons/bi";
 import { SlLocationPin } from "react-icons/sl";
-import Lower from "./Lower";
+import Lower from "./LowerHeader";
 
 function Header() {
 	return (

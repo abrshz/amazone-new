@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Lower.module.css";
+import classes from "./Header.module.css";
 import { AiOutlineMenuFold } from "react-icons/ai";
 // import { CiMenuBurger } from "react-icons/ci";
 

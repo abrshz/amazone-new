@@ -7,12 +7,13 @@ const CarouselEffect = () => {
 	return (
 		<div>
 			<Carousel
+			    key={img.id}
 				autoPlay={true}
 				infiniteLoop={true}
 				showIndicators={false}
 				showThumbs={false}
 			>
-				{img.map((images) => {
+				{img?.map((images) => {
 					return <img src={images} />;
 				})}
 			</Carousel>

@@ -1,8 +1,11 @@
 import React from 'react'
+import LayOut from '../../Components/LayOut/LayOut'
 
 function ProductDetail() {
   return (
-    <div>ProductDetail</div>
+    <LayOut>
+      <div>Product Detail</div>
+    </LayOut>
   )
 }
 

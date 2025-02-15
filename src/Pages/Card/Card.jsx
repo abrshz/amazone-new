@@ -1,13 +1,12 @@
 import React from 'react'
 import LayOut from '../../Components/LayOut/LayOut'
 
-function Payment() {
+function Card() {
   return (
-    <LayOut>
-      <div>Payment</div>
+    <LayOut >
+      <div>Card</div>
     </LayOut>
-
-)
+  )
 }
 
-export default Payment
+export default Card

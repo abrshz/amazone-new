@@ -8,6 +8,7 @@
 
 }
 .card_container :hover .button {
+    margin-top: 20px;
     display: block;
 }
 .card_container img {
@@ -23,7 +24,7 @@
     border: none;
     cursor: pointer;
     background-color: var(--primary-color);
-    width: 100%;
+    width: 80%;
     margin: 10px 0;
     border-radius: 30px;
     position: absolute;

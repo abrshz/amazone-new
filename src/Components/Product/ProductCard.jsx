@@ -4,10 +4,10 @@ import CurrencyFormat from "../CurrencyFormat/CurrencyFormat"
 import classes from "./Product.module.css"
 import { Link } from 'react-router-dom';
 
-function ProductCard({product}) {
+function ProductCard({product, flex}) {
   const {image , title , id , rating , price } = product;
   return (
-    <div className={classes.card_container}>
+    <div className={`${classes.card_container} ${flex?classes.product_flex: ""}`}>
          <Link to={`/products/${id}`}>
         <img src={image} key={id} alt="" />
      </Link>

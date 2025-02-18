@@ -12,7 +12,7 @@ function Header() {
 	const [{basket}, dispatch] = useContext(DataContext);
 	
 	return (
-		<>
+		<section className={classes.fixed}>
 			<section className={classes.header__container}>
 				{/* Logo delivery  */}
 				<div className={classes.logo__container}>
@@ -79,7 +79,7 @@ function Header() {
 			<section>
 				<Lower />
 			</section>
-		</>
+		</section>
 	);
 }
 // time 5:3o today 14th feb 2024

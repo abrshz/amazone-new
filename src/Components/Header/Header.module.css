@@ -17,7 +17,7 @@
 	max-width: 250px;
 }
 .logo__container img {
-	width: 80%;
+	width: 50%;
 	padding-top: 5px;
 	margin-left: 20px;
 	vertical-align: middle;
@@ -25,14 +25,15 @@
 .delivery {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: left;
 	gap: 3px;
 	font-weight: bold;
 	padding: 5px;
 }
 .delivery p {
-	font-size: 10px;
+	font-size: 5px;
 }
+
 .search {
 	display: flex;
 	align-items: center;
@@ -86,7 +87,7 @@
 .language {
 	width: 100px;
 	display: flex;
-	padding: 10px;
+	padding: 5px;
 }
 .language select {
 	background-color: #1a1a1a;

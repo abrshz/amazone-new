@@ -32,7 +32,7 @@ function Results() {
         {loading ? (<Loader />) : (
         <div className={classes.products_container}>
           {result?.map((product)=> (
-            <ProductCard key={product._id} product={product} />
+            <ProductCard key={product._id} product={product} renderDesc={false} renderAdd={true}/>
           )
           )}
         </div>

@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 import { DataContext } from '../Data Provider/DataProvider';
 import { Type } from '../../Utilities/action';
 
-function ProductCard({product, flex, renderDesc}) {
-  const {image , title , id , rating , price , description } = product;
+function ProductCard({product, flex, renderDesc , renderAdd}) {
+  const {image , title , id , rating , price , description ,  } = product;
 
   const [state, dispatch]=useContext(DataContext);
 
@@ -40,9 +40,10 @@ function ProductCard({product, flex, renderDesc}) {
             {/* price */}
             <CurrencyFormat amount={price} />
         </div>
-        <button className={classes.button} onClick={addToCart}>
+        {renderAdd && <button className={classes.button} onClick={addToCart}>
           Add to cart
         </button>
+        }        
      </div>
     </div>
   )

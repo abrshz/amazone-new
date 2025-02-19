@@ -8,26 +8,28 @@ import Loader from '../../Components/Loader/Loader'
 
 function ProductDetail() {
   const {productId} = useParams()
-  const [product, setProduct] = useState({})
+  const [product, setProduct] = useState(null)
   const [loading, setLoading] = useState(false)
   useEffect(()=>{
     setLoading(true)
     axios.get(`${productUrl}/products/${productId}`)
     .then((res)=>{
-      console.log(res.data);
       setProduct(res.data);
       setLoading(false)
     }).catch((err)=>{
       console.log(err);
       setLoading(false)
     })
-  }, [])
+  }, [productId])
   return (
     <LayOut>
-      {loading ? (<Loader />) : (<ProductCard product={product}
+      {loading ? (<Loader />) : product?(<ProductCard product={product}
       flex = {true}
       renderDesc={true}
-      />)}
+      renderAdd={true}
+      />) : (
+        <p>Product not found</p>
+      )}
       
     </LayOut>
   )

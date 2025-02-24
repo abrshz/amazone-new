@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Header.module.css";
-import { AiOutlineMenuFold } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 // import { CiMenuBurger } from "react-icons/ci";
 
 function Lower() {
@@ -8,7 +8,7 @@ function Lower() {
 		<div className={classes.lower__container}>
 			<ul>
 				<li>
-					<AiOutlineMenuFold />
+					<AiOutlineMenu />
 					<p>All</p>
 				</li>
 				<li>Today's Deals</li>

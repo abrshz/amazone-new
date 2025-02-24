@@ -5,46 +5,48 @@ import { FaSearch } from "react-icons/fa";
 import { BiCartAdd } from "react-icons/bi";
 import { SlLocationPin } from "react-icons/sl";
 import Lower from "./LowerHeader";
-import { DataContext } from "../Data Provider/DataProvider";
+import { DataContext } from "../DataProvider/DataProvider";
 
 function Header() {
 
 	const [{basket}, dispatch] = useContext(DataContext);
+	const totalItems = basket?.reduce((amount ,item)=>{
+		return (item?.amount || 0) + amount;
+	}, 0)
 	
 	return (
 		<section className={classes.fixed}>
 			<section className={classes.header__container}>
-				{/* Logo delivery  */}
 				<div className={classes.logo__container}>
-					{/* logo */}
 					<Link to="/">
 						<img
 							src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
 							alt="amazon logo"
 						/>
 					</Link>
-					{/* delivery */}
-
 					<div className={classes.delivery}>
 						<span>
-							{" "}
-							<SlLocationPin />{" "}
+							<SlLocationPin />
 						</span>
-						<p> Delivered to</p>
-						<span>Eritrea</span>
+						<div>
+							<p>Delivered to</p>
+						    <span>Eritrea</span>
+						</div>						
 					</div>
 				</div>
-				{/* Search bar starts */}
 				<div className={classes.search}>
-					{/* Search */}
-					<select name="" id="">
-						<option value="">All</option>
-					</select>
-					<input type="text" name="" id="" placeholder="Search product" />
-					{/* icon  */}
-					<FaSearch size={25} />
-				</div>
-				{/* Other section  */}
+                    <select name="" id="" className={classes.searchSelect}>
+                    <option value="">All</option>
+                    </select>
+				  <input 
+    type="text" 
+    className={classes.searchInput} 
+    placeholder="Search Amazon" 
+  />
+  <button className={classes.searchIcon} >
+    <FaSearch size={20} />
+  </button>
+</div>
 				<div className={classes.order__container}>
 					<Link to="" className={classes.language}>
 						{" "}
@@ -60,8 +62,10 @@ function Header() {
 					{/* three components  */}
 
 					<Link to="/auth">
-						<p>Sign In</p>
-						<span>Account & Lists</span>
+					    <div>
+						  <p>Sign In</p>
+						  <span>Account & Lists</span>
+						</div>
 					</Link>
 					{/* orders */}
 					<Link to="/orders">
@@ -69,10 +73,10 @@ function Header() {
 						<span>& Orders</span>
 					</Link>
 					{/* cart */}
-					<Link to="/card" className={classes.cart}>
+					<Link to="/cart" className={classes.cart}>
 						{/* icon */}
 						<BiCartAdd size={35} />
-						<span>{basket.length}</span>
+						<span>{totalItems}</span>
 					</Link>
 				</div>
 			</section>

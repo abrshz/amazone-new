@@ -7,14 +7,13 @@ const CarouselEffect = () => {
 	return (
 		<div>
 			<Carousel
-			    key={img.id}
 				autoPlay={true}
 				infiniteLoop={true}
 				showIndicators={false}
 				showThumbs={false}
 			>
-				{img?.map((images) => {
-					return <img src={images} />;
+				{img?.map((images, index) => {
+					return <img src={images} key={index} />;
 				})}
 			</Carousel>
 			<div className={classes.hero_image}></div>

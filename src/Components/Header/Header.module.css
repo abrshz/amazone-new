@@ -20,9 +20,10 @@
 	align-items: center;
 	justify-content: center;
 	max-width: 250px;
+	object-fit: contain;
 }
 .logo__container img {
-	width: 50%;
+	width: 60%;
 	padding-top: 5px;
 	margin-left: 20px;
 	vertical-align: middle;
@@ -30,51 +31,86 @@
 .delivery {
 	display: flex;
 	justify-content: center;
-	align-items: left;
+	align-items: center;
 	gap: 3px;
 	font-weight: bold;
 	padding: 5px;
 }
 .delivery p {
-	font-size: 5px;
+	font-size: 8px;
 }
-
 .search {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	width: 100%;
+	max-width: 630px;
+	height: 40px;
 	border-radius: 10px;
 	overflow: hidden;
-	width: 100%;
-	flex: 1;
-}
-.search select,
-.search input {
-	padding: 10px;
-	font-weight: bold;
-	outline: 1px solid #fff;
-}
-.search select {
+	background: #fff;
+	border: 1px solid #cdcdcd;
+	transition: all 0.3s ease;
+  }
+  
+  .search:hover {
+	border-color: #b9b9b9;
+  }
+  
+  .search:focus-within {
+	border-color: #007185;
+	box-shadow: 0 0 0 3px rgba(0, 121, 136, 0.2);
+  }
+  
+  .searchSelect {
+	width: auto;
+	height: 100%;
+	padding: 0 10px;
+	font-size: 12px;
+	background: #f0f2f2;
 	border: none;
-	background-color: #fff;
-}
-.search input {
-	border: 1px solid #fff;
-	width: 100%;
-	margin-right: -2px;
-	/* overflow: hidden; */
-}
-.search svg {
-	padding: 7px;
-	background-color: #febd69;
-	color: #1a1a1a;
-}
-.search svg:hover {
-	background-color: #d49644;
-}
-.search:focus-within {
-	border: 2px solid rgb(235, 161, 173);
-}
+	border-right: 1px solid #cdcdcd;
+	border-radius: 4px 0 0 4px;
+	appearance: none;
+	cursor: pointer;
+  }
+
+  .searchSelect option {
+	font-weight: bold;
+  }
+  
+  .searchSelect:hover {
+	background-color: #e6e6e6;
+  }
+  
+  .searchInput {
+	flex: 1;
+	height: 100%;
+	border: 0;
+	padding: 0 10px;
+	font-size: 14px;
+	color: #0F1111;
+  }
+  
+  .searchInput:focus {
+	outline: none;
+  }
+  
+  .searchIcon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 45px;
+	height: 100%;
+	background: #febd69;
+	border: none;
+	border-radius: 0 4px 4px 0;
+	cursor: pointer;
+  }
+  
+  .searchIcon:hover {
+	background: #f3a847;
+  }
+  
 .order__container {
 	display: flex;
 	justify-content: center;

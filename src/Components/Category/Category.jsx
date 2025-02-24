@@ -8,9 +8,9 @@ const Category = () => {
 			{CategoryInfos.map(
 				(
 					infos,
-					index // Added unique key prop
+					index 
 				) => (
-					<CategoryCard key={index} data={infos} /> // Added return statement
+					<CategoryCard key={index} data={infos} />  
 				)
 			)}
 		</section>

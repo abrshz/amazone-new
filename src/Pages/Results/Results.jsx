@@ -12,6 +12,7 @@ function Results() {
   const [loading , setLoading] = useState(false)
   const {categoryName} = useParams()
   useEffect(()=> {
+    setLoading(true)
     axios.get(`${productUrl}/products/category/${categoryName}`)
     .then((res)=>{
       setResult(res.data);

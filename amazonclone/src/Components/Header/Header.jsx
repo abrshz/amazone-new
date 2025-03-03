@@ -31,7 +31,7 @@ function Header() {
 						</span>
 						<div>
 							<p>Delivered to</p>
-						    <span>Eritrea</span>
+						    <span>Uganda</span>
 						</div>						
 					</div>
 				</div>

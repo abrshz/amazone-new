@@ -1,7 +1,8 @@
-import firebase from "firebase/compat/app";
-import {getAuth} from "firebase/auth"
+import firebase from "firebase/compat/app"
+import { getAuth } from "firebase/auth";
 import "firebase/compat/auth"
 import "firebase/compat/firestore"
+
 
 
 // Your web app's Firebase configuration
@@ -14,10 +15,8 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_APP_ID 
 };
 
-// Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = app.firestore();
 
-
-export const auth = getAuth(app)
-export const db = app.firestore()
 

@@ -2,7 +2,8 @@ import {Type} from "./action"
 
 export const initialState = {
     basket: [],
-    user: null
+    user: null,
+    favorites: [],
 }
 
 export const reducer = (state, action) => {
@@ -54,6 +55,17 @@ export const reducer = (state, action) => {
                     ...state,
                     user: action.user
                     }
+
+                case Type.ADD_TO_FAVORITES:
+                    return {
+                        ...state,
+                        favorites: [...state.favorites, action.item]
+                    };
+                case Type.REMOVE_FROM_FAVORITES:
+                    return {
+                        ...state,
+                        favorites: state.favorites.filter(item => item.id !== action.id)
+                    };
             
         default:
             return state;

@@ -101,7 +101,7 @@ function Payment() {
                 basket?.map((item => 
                   (<ProductCard
                     key={item.id}
-                    product={item} flex={true} />)
+                    product={item} flex={true} showFavorites={true} />)
                 ))
               }
             </div>
@@ -124,7 +124,7 @@ function Payment() {
                     <button type='submit'>
                       {processing? (
                         <div className={classes.loading}>  
-                          <ClipLoader color='gray' />
+                          <ClipLoader size={12} color='gray' />
                           <p>Please wait ...</p> 
                         </div>
                       ) : "Pay Now"}
@@ -134,11 +134,7 @@ function Payment() {
               </div>
             </div>
           </div>
-        </section>
-
-      
-				
-		
+        </section>   
     </LayOut>
 	);
 }

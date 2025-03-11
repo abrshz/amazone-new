@@ -1,7 +1,7 @@
 import React ,{useContext, useState} from "react";
 import classes from "./Header.module.css";
 import { Link } from "react-router-dom";
-import { FaSearch } from "react-icons/fa";
+import { IoMdSearch } from "react-icons/io";
 import { BiCartAdd } from "react-icons/bi";
 import { SlLocationPin } from "react-icons/sl";
 import Lower from "./LowerHeader";
@@ -37,7 +37,7 @@ function Header() {
 				</div>
 				<div className={classes.search}>
                     <select name="" id="" className={classes.searchSelect}>
-                    <option value="">All</option>
+                        <option value=""> All </option>
                     </select>
 				  <input 
     type="text" 
@@ -45,7 +45,7 @@ function Header() {
     placeholder="Search Amazon" 
   />
   <button className={classes.searchIcon} >
-    <FaSearch size={20} />
+    <IoMdSearch size={30} />
   </button>
 </div>
 				<div className={classes.order__container}>

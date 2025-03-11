@@ -40,6 +40,7 @@ const decrement = (id) => {
                 renderDesc={true}
                 flex={true}
                 renderAdd={false}
+                showFavorites={false}
                 />
               <div className={classes.btn_container}>
                 <button onClick={()=> increment(item)}><IoIosArrowUp /></button>
